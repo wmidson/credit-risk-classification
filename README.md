@@ -42,5 +42,21 @@ Use your knowledge of logistic regression to complete the following steps:
 ##  Overview of Analysis
 * Purpose: Create a model that can identify the creditworthiness of borrowers
 * Resources: csv data set that included historical lending activity from a lending services company
-* Dependent Variable: (y value) - "loan status". Shows whether a loan is healthy or high-risk (0-1). 
-* 
+* Dependent Variable: (y value) - "loan status". Shows whether a loan is healthy (0) or high-risk (1) . 
+* Independent variables: (X values) - "loan size", "interest rate", "borrower income", "debt to income ratio", "number of accounts", and "derogatory marks".
+
+## Process
+1. Read in lending_data.csv data from resources folder into a DataFrame
+2. Split the data into training and test sets for x's and y's using train_test_split (X_test, X_train, y_test, y_train)
+3. Defined the dependent and independent variables
+4. Created logistic regression model from the original data
+5. Fitted logistic regression model using the training data (X-train, y_train) and made predictions
+6. Evaluated the model's performance
+
+## Results
+The model predicted healthy loans at 100% precision and high risk loans at 84% precision. 
+
+## Summary 
+Collected data can be used effectively to create a functioning machine learning model. Randomly oversampling data allows for blanaced accuracy and high recall scores, which allow the model to predict high risk loans more effectively. 
+The model with original data was less likely to predict false negatives than the model using oversampled data (false negative = low risk when in reality high risk). 
+The Model with randomly oversampled data is likely the best model to use based on the high accuracy and recall values. I would recommend it. 
